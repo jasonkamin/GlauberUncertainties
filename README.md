@@ -1,5 +1,5 @@
 # GlauberUncertainties
-Set of macros to run over TGlauberMC simulations (ROOT TTree format) and calculate relative uncertainties for NColl, NPart, and TAA. 
+Set of macros to run over TGlauberMC simulations (ROOT TTree format) and calculate relative uncertainties for NColl, NPart, and TAA. Typically, 1M events is the right ballpark for reasonable statistics.  For the density parameter variations, we've been using 100 variations.  This number could be bumped up but then everything would take more time and 100 appears to be enough for robust results. 
 
 We calculate the relative uncertainties for NColl, NPart, and TAA. 
 We can obviously calculate the central values as well but, currently, 
