@@ -94,16 +94,13 @@ void Plot_pnPars_uncert()
   TCanvas *c1 = new TCanvas("c1","c1");
 
   TFile *f0[100];
-  TFile *f1;
   TFile *f2;
 
   int xbins=200; float xlo=0; float xhi=30; int ybins=3000; float ylo=0.5; float yhi=3000.5; int rebinx=4; int rebiny=20;
   if(plot_pbpb_or_ppb==1){
     xbins=500; xlo=0; xhi=30; ybins=3000; ylo=0.5; yhi=3000.5; rebinx=1; rebiny=1;//rebinx=4; rebiny=20;
-    f1 = TFile::Open("/Users/jason/Desktop/rootfiles/Pb_Pb_RAvariations_65.0mb_0.4fm_18000evt_0ALL.root");
-    //f1 = TFile::Open("/Users/jason/Desktop/rootfiles/Pbpn_Pbpn_RAvariations_65.0mb_0.4fm_100000evt.root");
-    //f2 = TFile::Open("/Users/jason/Desktop/rootfiles/Pb_Pb_70.0mb_0.4fm_1000000evt.root");
-    f2 = TFile::Open("/Users/jason/Dropbox/MyDocs/ALICE/Papers/glauber/glauber-2016/macros/mc/Pbpn_Rp6.68_Ap0.447_Rn6.70_An0.55_Pbpn_Rp6.68_Ap0.447_Rn6.70_An0.55_65.0mb_0.4fm_1000000evt.root");
+    f2 = TFile::Open("/Users/jason/Desktop/rootfiles/Pb_Pb_70.0mb_0.4fm_1000000evt.root");
+    //f2 = TFile::Open("/Users/jason/Dropbox/MyDocs/ALICE/Papers/glauber/glauber-2016/macros/mc/Pbpn_Rp6.68_Ap0.447_Rn6.70_An0.55_Pbpn_Rp6.68_Ap0.447_Rn6.70_An0.55_65.0mb_0.4fm_1000000evt.root");
     //sprintf(pathtovariations,"~/Desktop/rootfiles/Pb_Pb_nominalvariations/Nom_65mb/Pb_Pb_RAvariations_65.0mb_0.4fm_100100evt_p");
     sprintf(pathtovariations,"~/Desktop/rootfiles/Pb_Pb_nominalvariations/Nom_70mb/Pb_Pb_RAvariations_70.0mb_0.4fm_100100evt_p");
     //sprintf(pathtovariations,"~/Desktop/rootfiles/Pb_Pb_nominalvariations/Pbpn_Pbpn_noPerrors/Pbpn_Pbpn_noPerrors_RAvariations_65.0mb_0.4fm_100100evt_p");
@@ -115,7 +112,7 @@ void Plot_pnPars_uncert()
     cout << "pPb currently non-functional..." << endl;
     cout << "BREAKING !" << endl;
     return;
-    f1 = TFile::Open("/Users/jason/Desktop/rootfiles/Pbpn_p_RAvariations_73.0mb_0.4fm_100000evt.root");
+    // must set path to pPb variations here ! 
     f2 = TFile::Open("/Users/jason/Dropbox/MyDocs/ALICE/Papers/glauber/glauber-2016/macros/mc/Pbpn_Rp6.68_Ap0.447_Rn6.70_An0.55_p_73.0mb_0.4fm_1000000evt.root");
   }
   int xbins_for_b = 100*xbins;
